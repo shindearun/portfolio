@@ -22,6 +22,7 @@ import {trigger, state, style, transition, animate } from '@angular/animations';
   ]
 })
 export class TickerComponent implements OnInit, OnChanges {
+  /* tslint:disable:no-inferrable-types variable-name prefer-const arrow-return-shorthand no-input-rename */
   @Input('stocks') _stocks: any = [];
   stocks: any = [];
   interval: any;
