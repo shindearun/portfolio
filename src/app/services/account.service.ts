@@ -57,7 +57,7 @@ export class AccountService {
     calculateValue() {
         this._value = this._stocks
             .map(stock => stock.price)
-            .reduce((a, b) => { return a + b }, 0);
+            .reduce((a, b) => { return a + b; }, 0);
     }
 
     init() {

@@ -19,7 +19,7 @@ export class StocksInterceptor implements HttpInterceptor {
         if (event instanceof HttpResponse && event.url === ConfigService.get('api')) {
 
           const stocks = event.body as Array<Stock>;
-          let symbols = this.accountService.stocks.map(stock => stock.symbol);
+         // let symbols = this.accountService.stocks.map(stock => stock.symbol);
           stocks.forEach(stock => {
             this.accountService.stocks.map(item => {
               if (stock.symbol === item.symbol) {
